@@ -40,3 +40,35 @@ luciana.mostrarDatos();
 matias.mostrarDatos();
 matias.mostrarDatos();
 matias.mostrarDatos();
+
+
+class Alumno extends Usuario{
+
+    constructor(nombreCompleto, email, dni, password, nombreUsuario, comision, curso, legajo){
+        super(nombreCompleto, email, dni, password, nombreUsuario);
+        this.comision = comision;
+        this.curso = curso;
+        this.calificacion = [];
+        this.legajo = legajo;
+        this.asistencia = 0;
+    }
+
+    subirTareas(){
+
+    }
+
+    registrarCalificacion(nota){
+        this.calificacion.push(nota);
+    }
+
+    mostrarPromedio(){
+        let cantidadNotas= this.calificacion.length;
+        let sumaNotas = 0;
+
+        for (let i = 0; i < cantidadNotas; i++) {
+           sumaNotas += this.calificaciones[i];
+        }
+        let promedio = sumaNotas/cantidadNotas;
+        document.write(`<p>El promedio del alumno: ${this.nombre} es ${promedio} </p>`);
+    }
+}
