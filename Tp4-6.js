@@ -36,19 +36,19 @@ class Libro{
         this.pags = NuevoPags;
     }
     get Npags(){
-        return NuevoPags;
+        return this.pags;
     }
 
     
 }
 
-let x1 = new Libro(211312, `Titulo`, `Enrique`, 222);
+let x1 = new Libro(211312, `Titulo1`, `Enrique`, 22222);
 let x2 = new Libro(523253235, `Titulo2`, `Elias`, 502);
 
 x1.mostrarLibro();
 x2.mostrarLibro();
 
-if(x1.pags > x2.pags){
+if(x1.Npags > x2.Npags){
     document.write(`<br> El libro ${x1.titulo} tiene mas paginas`);
 }
 else{
